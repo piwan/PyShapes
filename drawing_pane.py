@@ -5,10 +5,11 @@ class ConsoleDrawingPane:
         self.height = height
         self.shapes = []
 
-    def draw(self):
+    def __repr__(self):
         # The algorithm:
         # we iterate point by point (pixel by pixel)
         # for each point we check if there is any Shape that contains it
+        result = ''
         for y in range(0, self.height - 1):
             for x in range(0, self.width - 1):
                 empty_symbol = ' '
@@ -18,6 +19,11 @@ class ConsoleDrawingPane:
                     if shape.is_point_included(x, y):
                         symbol = shape.color
 
-                print(symbol, end='')
+                result += symbol
 
-            print()  # enter new line
+            result += '\n'  # enter new line
+            
+        return result
+
+    def draw(self):
+        print(self)

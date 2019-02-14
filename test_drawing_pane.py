@@ -18,4 +18,4 @@ pane.shapes[1].move(1, 1)
 pane.shapes[3].is_filled = True
 pane.shapes[4].color = 'R'
 print("After changes:")
-pane.draw()
+print(pane)
