@@ -17,7 +17,7 @@ class ConsoleDrawingPane:
 
                 for shape in self.shapes:
                     if shape.is_point_included(x, y):
-                        symbol = drawing_symbol
+                        symbol = shape.color
 
                 print(symbol, end='')
 
