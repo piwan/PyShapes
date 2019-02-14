@@ -9,8 +9,8 @@ class ConsoleDrawingPane:
         # The algorithm:
         # we iterate point by point (pixel by pixel)
         # for each point we check if there is any Shape that contains it
-        for y in range(0, self.height - 1):
-            for x in range(0, self.width - 1):
+        for y in range(0, self.height):
+            for x in range(0, self.width):
                 drawing_symbol = 'X'
                 empty_symbol = ' '
                 symbol = empty_symbol
