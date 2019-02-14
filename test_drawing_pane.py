@@ -9,10 +9,11 @@ pane.shapes = [
     Square(10, 0, 10, 'Y')
 ]
 
-print("Before move:")
+print("Before changes:")
 pane.draw()
 
 pane.shapes[0].move(1, 10)
 pane.shapes[1].move(1, 1)
-print("After move:")
+pane.shapes[3].is_filled = True
+print("After changes:")
 pane.draw()
