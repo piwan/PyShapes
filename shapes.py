@@ -9,6 +9,10 @@ class Shape:
     def is_point_included(self, x, y):
         raise NotImplementedError()
 
+    def move(self, by_x, by_y):
+        self.position_x += by_x
+        self.position_y += by_y
+
 
 class Point(Shape):
     """Point shape"""
