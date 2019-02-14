@@ -11,13 +11,12 @@ class ConsoleDrawingPane:
         # for each point we check if there is any Shape that contains it
         for y in range(0, self.height - 1):
             for x in range(0, self.width - 1):
-                drawing_symbol = 'X'
                 empty_symbol = ' '
                 symbol = empty_symbol
 
                 for shape in self.shapes:
                     if shape.is_point_included(x, y):
-                        symbol = drawing_symbol
+                        symbol = shape.color
 
                 print(symbol, end='')
 
