@@ -49,3 +49,18 @@ class Square(Rectangle):
 
     def __init__(self, x, y, length, color='X', is_filled=False):
         super().__init__(x, y, length, length, color, is_filled)
+
+
+class Circle(Shape):
+    """Circle shape"""
+
+    def __init__(self, x, y, radius, color='X', is_filled=False):
+        super().__init__(x, y, color, is_filled)
+        self.radius = radius
+
+    def is_point_included(self, x, y):
+        circle_function = (x - self.position_x) ** 2 + (y - self.position_y) ** 2 - self.radius ** 2.0
+        if self.is_filled:
+            return circle_function <= 1.0
+        else:
+            return abs(circle_function) <= self.radius
