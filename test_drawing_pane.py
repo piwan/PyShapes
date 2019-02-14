@@ -8,4 +8,11 @@ pane.shapes = [
     Point(0, 0, 'G'),
     Square(10, 0, 10, 'Y')
 ]
+
+print("Before move:")
+pane.draw()
+
+pane.shapes[0].move(1, 10)
+pane.shapes[1].move(1, 1)
+print("After move:")
 pane.draw()
