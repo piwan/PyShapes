@@ -1,8 +1,8 @@
 class ConsoleDrawingPane:
 
-    def __init__(self, width=100, height=50):
-        self.width = 100
-        self.height = 50
+    def __init__(self, width=100, height=20):
+        self.width = width
+        self.height = height
         self.shapes = []
 
     def draw(self):
@@ -12,8 +12,8 @@ class ConsoleDrawingPane:
         for y in range(0, self.height - 1):
             for x in range(0, self.width - 1):
                 drawing_symbol = 'X'
-                empty_sumbol = ' '
-                symbol = empty_sumbol
+                empty_symbol = ' '
+                symbol = empty_symbol
 
                 for shape in self.shapes:
                     if shape.is_point_included(x, y):
